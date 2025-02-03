@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A & D Productions - Escape the Matrix</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body onload="showSection('home')">
+    <!-- Header Section -->
+    <header>
+      <div class="logo">
+        <h1>A & D Productions</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#" onclick="showSection('home')">Home</a></li>
+          <li><a href="#" onclick="showSection('about')">About</a></li>
+          <li><a href="#" onclick="showSection('film')">The Film</a></li>
+          <li><a href="#" onclick="showSection('song')">The Song</a></li>
+          <li><a href="#" onclick="showSection('contact')">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero section">
+      <div class="hero-content">
+        <h2>Welcome to A & D Productions</h2>
+        <img src="A child as the leading role in a movie poster for Escape the Matrix.png" alt="logo" height="700px">
+        <p>Presenting our first short film: "Escape the Matrix"</p>
+        <button onclick="showSection('film')">Explore Now</button>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+      <h2>About Us</h2>
+      <p>
+        A & D Productions is a creative film production company dedicated to
+        storytelling and cinematic experiences. "Escape the Matrix" is our debut
+        short film, and we’re excited to share it with you!
+      </p>
+    </section>
+
+    <!-- Film Section -->
+    <section id="film" class="section dark-section">
+      <h2>"Escape the Matrix"</h2>
+      <div class="film-details">
+        <img
+          src="A child as the leading role in a movie poster for Escape the Matrix.png"
+          alt="Escape the Matrix Poster"
+          height="500px"
+          width="500"
+        />
+        <div class="info">
+          <p>
+            <strong>Synopsis:</strong> A thrilling journey of self-discovery
+            where the protagonist breaks free from a fabricated reality to
+            uncover hidden truths.
+          </p>
+          <button onclick="showSection('song')">Listen to Soundtracks</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Song Section -->
+    <section id="song" class="section">
+      <h2>The Song: "Home Alone in the Dark"</h2>
+      <p>
+        Experience the official soundtrack of "Escape the Matrix". Available now
+        on all major streaming platforms.
+      </p>
+      <audio controls>
+        <source src="Home Alone in the Dark (2).mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+      <h2>The Song: "The Show "</h2>
+      <audio controls>
+        <source src="MOVIE SONG 1.mp3" type="audio/mpeg">
+        Your Browser dose not support the audio 
+      </audio>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section dark-section">
+      <h2>Contact Us</h2>
+      <form id="contact-form">
+        <label for="name">Name:</label><br />
+        <input type="text" id="name" name="name" required /><br /><br />
+
+        <label for="email">Email:</label><br />
+        <input type="email" id="email" name="email" required /><br /><br />
+
+        <label for="message">Message:</label><br />
+        <textarea id="message" name="message" rows="4" required></textarea
+        ><br /><br />
+
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>&copy; 2025 A & D Productions. All rights reserved.</footer>
+
+    <!-- JavaScript -->
+    <script>
+      function showSection(sectionId) {
+        const sections = document.querySelectorAll('.section');
+        sections.forEach((section) => {
+          section.style.display = 'none';
+        });
+        document.getElementById(sectionId).style.display = 'block';
+      }
+    </script>
+  </body>
+</html>
